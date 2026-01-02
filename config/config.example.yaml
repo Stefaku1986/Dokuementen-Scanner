@@ -1,0 +1,21 @@
+hotfolder:
+  input_dir: ./hotfolder/incoming
+  processed_dir: ./hotfolder/processed
+  failed_dir: ./hotfolder/failed
+  archive_dir: ./hotfolder/archive
+onedrive:
+  base_path: /Dokumente
+llm:
+  enabled: true
+  model: gpt-4o-mini
+  temperature: 0
+ocr:
+  enabled: true
+graph:
+  client_id: ${GRAPH_CLIENT_ID}
+  tenant_id: ${GRAPH_TENANT_ID}
+calendar:
+  calendar_id: null
+  default_time: "09:00"
+timezone: Europe/Berlin
+log_level: INFO
