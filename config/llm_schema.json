@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "document_type",
+    "issuer",
+    "document_date",
+    "amount_total",
+    "currency",
+    "due_date",
+    "iban",
+    "invoice_number",
+    "is_tax_relevant",
+    "tax_category",
+    "confidence",
+    "summary"
+  ],
+  "properties": {
+    "document_type": {"type": "string"},
+    "issuer": {"type": "string"},
+    "document_date": {"type": ["string", "null"], "format": "date"},
+    "amount_total": {"type": ["number", "null"]},
+    "currency": {"type": "string"},
+    "due_date": {"type": ["string", "null"], "format": "date"},
+    "iban": {"type": ["string", "null"]},
+    "invoice_number": {"type": ["string", "null"]},
+    "is_tax_relevant": {"type": "boolean"},
+    "tax_category": {"type": ["string", "null"]},
+    "confidence": {"type": "object"},
+    "summary": {
+      "type": "array",
+      "items": {"type": "string"},
+      "maxItems": 8
+    }
+  }
+}
